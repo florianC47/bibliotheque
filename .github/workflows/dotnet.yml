@@ -26,7 +26,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: fin
-      run: |
-        chmod +x make_html.sh
-        ./make_html.sh Chemin/Vers/FlatBibio
+    - name: constructionPpageHtml
+      run: sh make_html.sh FlatBibio/bin/debug/net8.0/FlatBiblio
